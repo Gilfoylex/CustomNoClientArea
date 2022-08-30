@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="600,360" caption="0,0,0,30" sizebox="4,4,4,4">
+    <VerticalLayout bkcolor="0xFF87CEEB">
+        <Control />
+        <HorizontalLayout height="40">
+            <Control />
+            <Button name="button1" text="button1" width="80" height="40" bkcolor="0xFF228B22" />
+            <Control />
+        </HorizontalLayout>
+        <Control />
+    </VerticalLayout>
+</Window>

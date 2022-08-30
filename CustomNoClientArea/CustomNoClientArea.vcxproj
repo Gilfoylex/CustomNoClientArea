@@ -9,14 +9,6 @@
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -39,19 +31,6 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -63,23 +42,29 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ExternalIncludePath>$(SolutionDir)\ThirdParty\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ThirdParty\lib\$(PlatformTarget)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ExternalIncludePath>$(SolutionDir)\ThirdParty\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>$(SolutionDir)ThirdParty\lib\$(PlatformTarget)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;UILIB_STATIC;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/D_HAS_STD_BYTE=0 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Duilib_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -88,52 +73,69 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;UILIB_STATIC;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Duilib_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIActiveX.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIButton.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UICheckBox.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UICombo.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIDateTime.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIEdit.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIFlash.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIGifAnim.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UILabel.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIList.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIOption.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIProgress.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIRichEdit.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIScrollBar.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UISlider.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIText.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UITreeView.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIWebBrowser.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIBase.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIContainer.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIControl.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIDefine.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIDlgBuilder.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIManager.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIMarkup.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIRender.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Layout\UIChildLayout.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Layout\UIHorizontalLayout.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Layout\UITabLayout.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Layout\UITileLayout.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Layout\UIVerticalLayout.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\StdAfx.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\UIlib.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\downloadmgr.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\FlashEventHandler.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\stb_image.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\UIDelegate.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\Utils.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\WebBrowserEventHandler.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\WinImplBase.h" />
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\WndShadow.h" />
+    <ClInclude Include="BaseWindow.h" />
     <ClInclude Include="CustomNoClientArea.h" />
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="CustomView.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseWindow.cpp" />
     <ClCompile Include="CustomNoClientArea.cpp" />
+    <ClCompile Include="CustomView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CustomNoClientArea.rc" />
@@ -141,6 +143,9 @@
   <ItemGroup>
     <Image Include="CustomNoClientArea.ico" />
     <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="CustomView.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

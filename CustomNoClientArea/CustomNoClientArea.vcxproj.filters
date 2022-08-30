@@ -13,23 +13,158 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{7903d8d2-c703-4645-9c8e-4218ab8736ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\DuiLib">
+      <UniqueIdentifier>{e5086f2e-cbb2-451c-974c-b0baf86ffef4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CustomNoClientArea.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIActiveX.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIButton.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UICheckBox.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UICombo.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIDateTime.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIEdit.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIFlash.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIGifAnim.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UILabel.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIList.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIOption.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIProgress.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIRichEdit.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIScrollBar.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UISlider.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIText.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UITreeView.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Control\UIWebBrowser.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIBase.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIContainer.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIControl.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIDefine.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIDlgBuilder.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIManager.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIMarkup.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Core\UIRender.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Layout\UIChildLayout.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Layout\UIHorizontalLayout.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Layout\UITabLayout.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Layout\UITileLayout.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Layout\UIVerticalLayout.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\StdAfx.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\UIlib.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\downloadmgr.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\FlashEventHandler.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\stb_image.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\UIDelegate.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\Utils.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\WebBrowserEventHandler.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\WinImplBase.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\include\DuiLib\Utils\WndShadow.h">
+      <Filter>ThirdParty\DuiLib</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CustomNoClientArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,5 +180,10 @@
     <Image Include="CustomNoClientArea.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="CustomView.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

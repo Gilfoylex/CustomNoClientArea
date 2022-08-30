@@ -12,6 +12,7 @@
 #define IDI_CUSTOMNOCLIENTAREA			107
 #define IDI_SMALL				108
 #define IDC_CUSTOMNOCLIENTAREA			109
+#define IDC_CUSTOMVIEW			200
 #define IDC_MYICON				2
 #ifndef IDC_STATIC
 #define IDC_STATIC				-1
